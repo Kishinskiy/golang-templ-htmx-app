@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/Kishinskiy/GoBlog/app"
+	"github.com/Kishinskiy/golang-templ-htmx-app/app"
 	"context"
 	"log"
 	"os"
