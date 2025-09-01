@@ -1,0 +1,9 @@
+package home
+
+import "github.com/Kishinskiy/GoBlog/internal/view/layout"
+
+templ Index(){
+    @layout.Base(layout.BaseProps{Title: "Main Page"}) {
+        <h1>Hello, World</h1>
+    }
+}
