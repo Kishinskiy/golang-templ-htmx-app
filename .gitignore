@@ -1,3 +1,5 @@
 bin
 **/.DS_Store
 tmp
+/web/node_modules
+/web/public/assets

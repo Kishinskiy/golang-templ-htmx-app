@@ -29,7 +29,7 @@ watch-app:
 		--build.cmd "$(MAKE) build-app" \
 		--build.bin "$(BINPATH)" \
 		--build.include_ext "go" \
-		--build.exclude_dir "bin,web/node_modules" \
+		--build.exclude_dir "bin,web" \
 
 .PHONY: watch-templ
 watch-templ:
