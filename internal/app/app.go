@@ -1,8 +1,8 @@
 package app
 
 import (
-	"GoService/internal/config"
-	"GoService/internal/handler"
+	"github.com/Kishinskiy/golang-templ-htmx-app/internal/config"
+	"github.com/Kishinskiy/golang-templ-htmx-app/internal/handler"
 	"context"
 	"log/slog"
 	"net/http"

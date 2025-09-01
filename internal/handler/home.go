@@ -1,7 +1,7 @@
 package handler
 
 import (
-	"GoBlog/internal/view/home"
+	"github.com/Kishinskiy/golang-templ-htmx-app/internal/view/home"
 	"net/http"
 )
 
