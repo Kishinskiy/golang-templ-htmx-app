@@ -6,13 +6,19 @@ import (
 
 	"github.com/go-chi/chi/v5"
 )
+type Dependencies struct {
+	AssetsFS http.FileSystem
+}
 
 type hadlerFunc func(http.ResponseWriter, *http.Request) error
 
-func RegisterRouters(r *chi.Mux) {
+func RegisterRouters(r *chi.Mux, deps Dependencies) {
 	home := homeHandler{}
 	r.Get("/", handler(home.handleIndex))
+
+	r.Handle("/assets/*", http.StripPrefix("/assets", http.FileServer(deps.AssetsFS)))
 }
+
 
 func handler(h hadlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
