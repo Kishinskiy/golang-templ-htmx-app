@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.21",
+    "htmx.org": "^2.0.6",
     "postcss": "^8.5.6"
   }
 }
