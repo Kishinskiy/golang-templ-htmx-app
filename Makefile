@@ -1,7 +1,7 @@
 BINPATH := ./bin/myapp
 
 .PHONY: build
-build: build-templ build-app build-css build-js
+build: build-templ build-app install-deps build-css build-js
 
 .PHONY: build-app
 build-app:
@@ -10,6 +10,10 @@ build-app:
 .PHONY: build-templ
 build-templ:
 	templ generate
+
+.PHONY: install-deps
+install-deps:
+	npm --prefix web install
 
 .PHONY: build-css
 build-css:
@@ -25,7 +29,7 @@ run: build
 
 .PHONY: watch
 watch: 
-	$(MAKE) -j4 watch-app watch-templ watch-css watch-js
+	$(MAKE) -j5 watch-app watch-templ install-deps watch-css watch-js
 
 .PHONY: watch-app
 watch-app:
