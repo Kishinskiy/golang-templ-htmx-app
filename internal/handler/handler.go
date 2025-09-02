@@ -15,6 +15,7 @@ type hadlerFunc func(http.ResponseWriter, *http.Request) error
 func RegisterRouters(r *chi.Mux, deps Dependencies) {
 	home := homeHandler{}
 	r.Get("/", handler(home.handleIndex))
+	r.Get("/about", handler(home.handleAbout))
 
 	r.Handle("/assets/*", http.StripPrefix("/assets", http.FileServer(deps.AssetsFS)))
 }

@@ -1,0 +1,11 @@
+package home
+
+import "github.com/Kishinskiy/golang-templ-htmx-app/internal/view/layout"
+
+templ About() {
+    @layout.Base(layout.BaseProps{Title: "About"}) {
+        <h1 class="text-3xl font-bold mb-4">About Us</h1>
+        <p class="mb-4">This is the about page of our awesome web application.</p>
+        <p>We use Go, Templ, and HTMX to build dynamic web applications with ease.</p>
+    }
+}
